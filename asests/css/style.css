@@ -155,11 +155,12 @@ section {
 }
 
 .about {
-  height: 300px;
-  margin: 30px 0px;
+margin: 0px 10px;
+float: left;
+width: 50%;
 }
 
-.about p {
+.aboutTwo{
   padding: 50px 25px;
   width: 47%;
   float: left;
@@ -177,7 +178,7 @@ section {
   box-shadow: 3px 3px 5px 2px;
   float: left;
   margin: 0px 20px 10px 0px;
-  width: 50%;
+  width: 100%;
 }
 
 .port {
@@ -326,3 +327,5 @@ input[type=submit]:hover {
   color: #ffffff;
   border-top: 8px solid #4aaaa5;
 }
+/*------------------------------------------------------------------------*/
+/* 6.Media Quueries */
