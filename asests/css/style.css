@@ -21,7 +21,10 @@ body {
   height: 100%;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Georgia', Times, Times New Roman, serif;
   color: #4aaaa5;
 }
@@ -49,62 +52,53 @@ a {
   background: #ffffff;
   border-bottom: 8px solid #4aaaa5;
 }
-
+/* 
 /* Style the header and some padding */
-.navbar-links {
+.topnav {
   overflow: hidden;
-  padding: 20px 10px;
-  width: 960px;
-  margin: 0 auto;
+  padding: 10px;
+  background-color: #222;
 }
 
 /* Style the header links */
-.navbar-links a {
+.topnav a {
   float: left;
-  color: black;
+  color: #4aaaa5;
   text-align: center;
-  padding: 12px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
+  display: block;
 }
 
 /* Style the logo link i.e. name */
-.navbar-links a.logo {
+.topnav a.logo {
   background: #4aaaa5;
   color: #ffffff;
 }
 
 /* Change the background color on mouse-over */
-.navbar-links a:hover {
+.topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Style the active/current link*/
-.navbar-links a.active {
+.topnav a.active {
   background-color: #4aaaa5;
   color: white;
 }
 
+.topnav .icon {
+  display: none;
+}
 /* Float the link section to the right */
 .header-right {
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .navbar-links a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .header-right {
-    float: none;
-  }
-}
 
 /*------------------------------------------------------------------------*/
 /* 3.Content */
@@ -155,12 +149,12 @@ section {
 }
 
 .about {
-margin: 0px 10px;
-float: left;
-width: 50%;
+  margin: 0px 10px;
+  float: left;
+  width: 50%;
 }
 
-.aboutTwo{
+.aboutTwo {
   padding: 50px 25px;
   width: 47%;
   float: left;
@@ -225,7 +219,10 @@ width: 50%;
   transition: all .3s ease-in-out;
 }
 
-.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
   border: solid 1px #bbbbbb;
   color: #000;
   background: #bbbbbb;
@@ -293,7 +290,9 @@ width: 50%;
 
 /*------------------------------------------------------------------------*/
 /* 4. Contact Form */
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -316,7 +315,6 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
 /*------------------------------------------------------------------------*/
 /* 5. Footer */
 #footer {
@@ -327,11 +325,77 @@ input[type=submit]:hover {
   color: #ffffff;
   border-top: 8px solid #4aaaa5;
 }
+
 /*------------------------------------------------------------------------*/
 /* 6.Media Quueries */
-@media only screen and (min-width:900px){
-  section{
+@media only screen and (max-width:900px) {
+  html{
+    height: inherit;
+  }
+  section {
     max-width: 100%;
     min-height: 100%;
+
+  }
+
+  .about {
+    margin: 0px auto;
+    float: left;
+    width: 100%;
+  }
+
+  .aboutTwo {
+    padding: 50px 25px;
+    width: inherit;
+    float: left;
+    background: #1f1f1f;
+    color: #f7f7f7;
+    margin: 40px auto;
+    height: inherit;
+    text-align: center;
+    /* border-radius: 5px; */
+    clear: both;
+  }
+
+  .face {
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px;
+    float: none;
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    display: block;
+  }
+  #footer {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
